@@ -3,12 +3,15 @@ const User = require("./../models/User.model");
 const bcrypt = require("bcryptjs");
 const salt = 12;
 
+///get sign up view
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
+//get log in view
 router.get("/login", (req, res, next) => res.render("auth/login"));
 
+//
 router.post("/signup", async (req, res, next) => {
   const { username, password } = req.body;
 
